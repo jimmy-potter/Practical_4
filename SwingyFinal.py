@@ -587,19 +587,15 @@ def run_games(learner, hist, iters = 100, t_len = 100):
 
 
 if __name__ == '__main__':
-    for i in range(10):
-    	# Select agent.
-        agent = Learner()
 
-    	# Empty list to save history.
-        hist = []
+	# Select agent.
+	agent = Learner()
 
-    	# Run games. 
-        run_games(agent, hist, 500, 1)
-    
-    
-    
-    	# Save history. 
-        #save('hist',np.array(hist))
-        np.save(''.join(['hist',str(i)]),np.array(hist))
+	# Empty list to save history.
+	hist = []
 
+	# Run games. 
+	run_games(agent, hist, 500, 10)
+
+	# Save history. 
+	np.save('hist',np.array(hist))
